@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary-color: #D5FFD0;
   --secondary-color: #40F8FF;
@@ -8,6 +7,7 @@
 
 a, h1, h2, h3, h4, h5, h6, p, span, button, label {
   color: var(--font-color);
+  
 }
 
 /*Обнуление*/
@@ -35,9 +35,10 @@ nav, footer, header, aside {
   display: block;
 }
 
+
 html, body {
   background-color: var(--background-color);
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   width: 100%;
   margin: 0 auto;
   height: 100%;
@@ -83,6 +84,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
+
   font-size: inherit;
   font-weight: 400;
   color: black;
@@ -90,4 +92,3 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 
-/*# sourceMappingURL=globals.css.map */
