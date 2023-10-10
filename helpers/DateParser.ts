@@ -2,7 +2,7 @@
 
 type Time = {
     hours: number,
-    minutes: number
+    minutes: string
 }
 
 interface IDate {
@@ -48,9 +48,10 @@ export const DateParser = (date: string) : IDate => {
     const day = d.getDate()
     let month = ParseMonths(d.getMonth());
     const year = d.getFullYear()
+    let minutes = d.getMinutes() < 10 ? `0${d.getMinutes()}` : `${d.getMinutes()}`
     const time: Time = {
         hours: d.getHours(),
-        minutes: d.getMinutes()
+        minutes: minutes
     }
 
     return {

@@ -1,0 +1,155 @@
+.news .container {
+  display: flex;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .news .container {
+    padding-right: calc(40px + -25 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .news .container {
+    padding-left: calc(40px + -25 * ((100vw - 320px) / 880));
+  }
+}
+
+.news .container main .main__content .main__title, .news .container header .header__title h1, .news .container header .header__title .header__button button {
+  font-size: calc(12px + 8 * ((100vw - 320px) / 1080));
+  font-weight: 600;
+}
+
+.news .container main .main__content .main__body, .news .container header .header__content .header__time, .news .container header .header__content a {
+  font-size: calc(10px + 6 * ((100vw - 320px) / 1080));
+  font-weight: 500;
+}
+
+.news .container {
+  background-color: var(--secondary-color);
+  flex-direction: column;
+}
+.news .container header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1200px) {
+  .news .container header {
+    margin-top: calc(10px + 10 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .news .container header {
+    margin-bottom: calc(10px + 10 * ((100vw - 320px) / 880));
+  }
+}
+.news .container header .header__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media (max-width: 1200px) {
+  .news .container header .header__title {
+    margin-bottom: calc(10px + 10 * ((100vw - 320px) / 880));
+  }
+}
+.news .container header .header__title .header__button {
+  width: 20%;
+}
+@media (max-width: 767px) {
+  .news .container header .header__title .header__button {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 552px) {
+  .news .container header .header__title .header__button {
+    width: 100%;
+  }
+}
+.news .container header .header__title .header__button button {
+  width: 100%;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  height: 24px;
+}
+@media (max-width: 1200px) {
+  .news .container header .header__title .header__button button {
+    height: calc(30px + -6 * ((100vw - 320px) / 880));
+  }
+}
+.news .container header .header__title h1 {
+  text-align: center;
+}
+.news .container header .header__content {
+  display: flex;
+  justify-content: space-between;
+}
+.news .container header .header__content a {
+  text-decoration: underline;
+}
+.news .container main {
+  width: 100%;
+}
+.news .container main .main__image {
+  width: 35%;
+}
+.news .container main .main__image img {
+  width: 100%;
+  float: left;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+@media (max-width: 1200px) {
+  .news .container main .main__image img {
+    margin-bottom: calc(8px + 8 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .news .container main .main__image img {
+    margin-right: calc(8px + 8 * ((100vw - 320px) / 880));
+  }
+}
+.news .container main .main__content .main__title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+@media (max-width: 1200px) {
+  .news .container main .main__content .main__title {
+    margin-bottom: calc(10px + 10 * ((100vw - 320px) / 880));
+  }
+}
+.news .container main .main__content .main__body {
+  display: inline;
+}
+.news .container main .main__content .main__body p {
+  line-height: 1.25rem;
+  list-style-type: square;
+  margin-bottom: 16px;
+}
+@media (max-width: 1200px) {
+  .news .container main .main__content .main__body p {
+    margin-bottom: calc(8px + 8 * ((100vw - 320px) / 880));
+  }
+}
+.news .container main .main__content .main__body a {
+  text-decoration: underline;
+}
+.news .container main .main__content .main__body aside {
+  font-style: italic;
+  margin-left: 16px;
+}
+@media (max-width: 1200px) {
+  .news .container main .main__content .main__body aside {
+    margin-left: calc(8px + 8 * ((100vw - 320px) / 880));
+  }
+}
+.news .container main .main__content .main__body ul li {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=news.module.css.map */

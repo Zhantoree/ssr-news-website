@@ -10,6 +10,10 @@ a, h1, h2, h3, h4, h5, h6, p, span, button, label {
   color: var(--font-color);
 }
 
+.element.element-image {
+  width: 30%;
+}
+
 /*Обнуление*/
 * {
   padding: 0;

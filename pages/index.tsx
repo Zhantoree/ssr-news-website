@@ -120,3 +120,8 @@ export default function Home() {
         <footer></footer>
     </>);
 }
+
+// export const getStaticProps = async (context) => {
+// return
+// }
+

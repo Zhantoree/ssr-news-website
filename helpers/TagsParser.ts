@@ -1,9 +1,6 @@
 export const TagsParser = (tags: string): string => {
 
     let arr: string[] = tags.trim().split(" ");
-
-    console.log(arr)
-
     let result = ""
     for(let i = 0; i < arr.length; i++) {
         if(i===arr.length-1) {

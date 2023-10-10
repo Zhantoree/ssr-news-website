@@ -35,6 +35,26 @@ export interface Fields {
     thumbnail: string
 }
 
+export interface INewsSingle {
+    id: string
+    type: string
+    sectionId: string
+    sectionName: string
+    webPublicationDate: string
+    webTitle: string
+    webUrl: string
+    apiUrl: string
+    fields: IFields
+}
+
+export interface IFields {
+    thumbnail: string
+    trailText: string
+    headline: string
+    body: string
+}
+
+
 export enum PageSize{
     default = 12,
     medium = 24,
