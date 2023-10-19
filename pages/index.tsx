@@ -110,8 +110,6 @@ export default function Home() {
                             })
                             :
                             <div className={s.news__loading}>...Loading</div>
-
-
                     }
                 </div>
             </div>
@@ -120,8 +118,3 @@ export default function Home() {
         <footer></footer>
     </>);
 }
-
-// export const getStaticProps = async (context) => {
-// return
-// }
-

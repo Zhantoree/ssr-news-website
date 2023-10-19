@@ -3,12 +3,15 @@ import {INewsSingle} from "@/store/news/news.type";
 import {GetServerSideProps} from "next";
 import {useEffect, useState} from "react";
 import s from './news.module.scss'
+import path from "path";
 
 import {DateParser} from "@/helpers/DateParser";
 import Link from "next/link";
 
 export const getServerSideProps = (async (context) => {
-    const id = context.req.url!.slice(6)
+    // @ts-ignore
+    let id = (Object.values(context.params!.id)).join('/')
+
     const news = await fetchOneNews({id: id})
     return {
         props: {...news}
@@ -22,7 +25,6 @@ export default function (news: INewsSingle) {
             setIsLoading(true) :
             setIsLoading(false)
     }, [news.id])
-    console.log(news)
     const getMarkup = (markup: string) => {
         return {__html: markup}
     }
@@ -37,15 +39,19 @@ export default function (news: INewsSingle) {
                         <header>
                             <div className={s.header__title}>
                                 <div className={s.header__button}>
-                                    <button>
-                                        <Link href='/'>Go back</Link>
-                                    </button>
+                                    <Link href='/'>
+                                        <button>
+                                            Go back
+                                        </button>
+                                    </Link>
+
+
                                 </div>
                                 <h1 dangerouslySetInnerHTML={getMarkup(news.fields?.headline)}></h1>
                             </div>
                             <div className={s.header__content}>
                                 <p className={s.header__time}>{`${date.day} ${date.month} ${date.year} ${date.time.hours}:${date.time.minutes}`}</p>
-                                <Link href={news.webUrl} className={s.header__link}>read on Guardian</Link>
+                                <Link href={`${news.webUrl}`} className={s.header__link}>read on Guardian</Link>
                             </div>
                         </header>
                         <main>

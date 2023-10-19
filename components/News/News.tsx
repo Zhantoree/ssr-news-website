@@ -13,10 +13,11 @@ interface NewsProps {
 
 const News: FC<NewsProps> = ({id, webPublicationDate, webTitle, fields}) => {
     let date = DateParser(webPublicationDate)
+
     const [isLoading, setIsLoading] = useState(true)
-    let link: string = id===undefined ? "" : `/news/${id}/`;
+    let link: string = id === undefined ? "" : `/news/${id}/`;
     useEffect(() => {
-        id === undefined || fields?.thumbnail===undefined ?
+        id === undefined || fields?.thumbnail === undefined ?
             setIsLoading(true) :
             setIsLoading(false)
     }, [isLoading])
@@ -24,7 +25,7 @@ const News: FC<NewsProps> = ({id, webPublicationDate, webTitle, fields}) => {
         <>
             {
                 isLoading ?
-                    <h1>Loading...</h1>
+                    ""
                     :
                     <div className={s.news}>
                         <div className={s.news__image}>
@@ -44,7 +45,6 @@ const News: FC<NewsProps> = ({id, webPublicationDate, webTitle, fields}) => {
                     </div>
             }
         </>
-
 
 
     );
