@@ -8,12 +8,16 @@ import {DateParser} from "@/helpers/DateParser";
 import Link from "next/link";
 
 export const getServerSideProps = (async (context) => {
-    // @ts-ignore
-    let id = (Object.values(context.params!.id)).join('/')
+    try {
+        // @ts-ignore
+        let id = (Object.values(context.params!.id)).join('/')
 
-    const news = await fetchOneNews({id: id})
-    return {
-        props: {...news}
+        const news = await fetchOneNews({id: id})
+        return {
+            props: {...news}
+        }
+    } catch (e) {
+        new Error("Data loading error")
     }
 }) satisfies GetServerSideProps
 export default function (news: INewsSingle) {
