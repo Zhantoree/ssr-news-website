@@ -17,7 +17,9 @@ export const getServerSideProps = (async (context) => {
             props: {...news}
         }
     } catch (e) {
-        new Error("Data loading error")
+        return {
+            props: {undefined}
+        }
     }
 }) satisfies GetServerSideProps
 export default function (news: INewsSingle) {
