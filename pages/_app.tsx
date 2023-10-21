@@ -1,4 +1,5 @@
 import '../styles/globals.scss'
+import '../styles/integrated.scss'
 import type { AppProps } from 'next/app'
 import {Provider} from "react-redux";
 import {setupStore} from "@/store/store";

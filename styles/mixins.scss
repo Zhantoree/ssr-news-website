@@ -30,18 +30,18 @@ $maxWidthContainer: 1200;
 %default-container {
   display: flex;
   max-width: 1200px;
-  @include adaptive-value(padding-right, 15, 40, 1);
-  @include adaptive-value(padding-left, 15, 40, 1);
+  @include adaptive-value(padding-right, 15, 8, 1);
+  @include adaptive-value(padding-left, 15, 8, 1);
   margin: 0 auto;
   align-items: center;
 }
 
 %title-font-size {
-  @include adaptive-font(20, 12);
+  @include adaptive-font(24, 14);
   font-weight: 600;
 }
 %text-font-size {
-  @include adaptive-font(16, 10);
+  @include adaptive-font(20, 16);
   font-weight: 500;
 }
 %drop-font-size {

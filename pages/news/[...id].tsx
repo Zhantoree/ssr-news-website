@@ -3,7 +3,6 @@ import {INewsSingle} from "@/store/news/news.type";
 import {GetServerSideProps} from "next";
 import {useEffect, useState} from "react";
 import s from './news.module.scss'
-import path from "path";
 
 import {DateParser} from "@/helpers/DateParser";
 import Link from "next/link";

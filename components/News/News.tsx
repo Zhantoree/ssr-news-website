@@ -8,7 +8,7 @@ interface NewsProps {
     id: string,
     webPublicationDate: string,
     webTitle: string,
-    fields: Fields | undefined
+    fields: Fields
 }
 
 const News: FC<NewsProps> = ({id, webPublicationDate, webTitle, fields}) => {
@@ -23,27 +23,22 @@ const News: FC<NewsProps> = ({id, webPublicationDate, webTitle, fields}) => {
     }, [isLoading])
     return (
         <>
-            {
-                isLoading ?
-                    ""
-                    :
-                    <div className={s.news}>
-                        <div className={s.news__image}>
-                            <img src={fields?.thumbnail} alt=""/>
-                        </div>
-                        <div className={s.news__content}>
-                            <p className={s.news__date}>{`${date.day} ${date.month} ${date.year}   ${date.time.hours}:${date.time.minutes}`}</p>
-                            <p className={s.news__title}>{webTitle}</p>
-                        </div>
-                        <div className={s.news__button}>
-                            <button>
-                                <Link href={`${link}`}>
-                                    Details
-                                </Link>
-                            </button>
-                        </div>
-                    </div>
-            }
+            <div className={s.news}>
+                <div className={s.news__image}>
+                    <img src={fields?.thumbnail} alt={webTitle}/>
+                </div>
+                <div className={s.news__content}>
+                    <p className={s.news__date}>{`${date.day} ${date.month} ${date.year}   ${date.time.hours}:${date.time.minutes}`}</p>
+                    <p className={s.news__title}>{webTitle}</p>
+                </div>
+                <div className={s.news__button}>
+                    <button>
+                        <Link href={`${link}`}>
+                            Details
+                        </Link>
+                    </button>
+                </div>
+            </div>
         </>
 
 

@@ -4,7 +4,7 @@ import News from "../components/News/News";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
 import {useEffect, useState} from "react";
 import {fetchNews} from "@/store/news/ActionCreator";
-import {PageSize, PageSort} from "@/store/news/news.type";
+import {INews, PageSize, PageSort} from "@/store/news/news.type";
 import {TagsParser} from "@/helpers/TagsParser";
 
 
@@ -65,12 +65,12 @@ export default function Home() {
 
             <div className={s.container}>
                 <div className={s.header}>
-                    <div className={s.header__search}>
+                    <form onSubmit={(e) => e.preventDefault()} className={s.header__search}>
                         <input value={input} onChange={e => setInput(e.target.value)} type="text"/>
                         <div className={s.header__button}>
-                            <button onClick={e => setRender(!render)}>Find</button>
+                            <button type="submit" onClick={e => setRender(!render)}>Find</button>
                         </div>
-                    </div>
+                    </form>
                     <div className={s.header__sort}>
                         <div className={s.header__dropdown_sort}>
                             <label htmlFor="sort">Sort by: </label>
@@ -100,13 +100,15 @@ export default function Home() {
                     {
                         !isLoading
                             ?
-                            news.map((item) => {
+                            news.map((item: INews) => {
+                                console.log(item)
                                 return <div key={item.id} className={s.news__item}>
                                     <News id={item.id} webPublicationDate={item.webPublicationDate}
                                           webTitle={item.webTitle}
                                           fields={item.fields}
                                     />
                                 </div>
+
                             })
                             :
                             <div className={s.news__loading}>...Loading</div>

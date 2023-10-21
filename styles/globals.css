@@ -1,17 +1,13 @@
 @charset "UTF-8";
 :root {
-  --primary-color: #D5FFD0;
-  --secondary-color: #40F8FF;
-  --background-color: #279EFF;
+  --primary-color: #2E97A7;
+  --secondary-color: #64CCC5;
+  --background-color: #C2D9FF;
   --font-color: #393939;
 }
 
 a, h1, h2, h3, h4, h5, h6, p, span, button, label {
   color: var(--font-color);
-}
-
-.element.element-image {
-  width: 30%;
 }
 
 /*Обнуление*/
