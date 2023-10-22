@@ -32,11 +32,13 @@ const News: FC<NewsProps> = ({id, webPublicationDate, webTitle, fields}) => {
                     <p className={s.news__title}>{webTitle}</p>
                 </div>
                 <div className={s.news__button}>
-                    <button>
-                        <Link href={`${link}`}>
+
+                    <Link href={`${link}`}>
+                        <button>
                             Details
-                        </Link>
-                    </button>
+                        </button>
+
+                    </Link>
                 </div>
             </div>
         </>

@@ -27,6 +27,10 @@
   font-weight: 500;
 }
 
+.news .container main .main__image img {
+  border: 8px solid var(--secondary-color);
+}
+
 .news .container {
   background-color: var(--background-color);
   flex-direction: column;

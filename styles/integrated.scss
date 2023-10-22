@@ -12,18 +12,17 @@ figure {
   }
 }
 
-.element-image {
+.element-image, .element {
   width: 100%;
-
 
 
   img {
     width: 35%;
     height: auto;
     float: left;
+    @extend %border-images;
     @include adaptive-value("margin-bottom", 16, 8, 1);
     @include adaptive-value("margin-right", 16, 8, 1);
-
 
 
     @media (max-width: 992px) {
@@ -39,10 +38,30 @@ figure {
   }
 }
 
+video {
+  width: 100%;
+}
+
 figure.element.element-interactive.interactive.element--showcase {
   display: inline;
+
   a {
     @include adaptive-font(80, 40);
     text-decoration: none !important;
+  }
+}
+
+.element-video {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+
+  & > * {
+    width: 100%;
+    @include adaptive-value("height", 675, 150, 1);
+    @extend %border-images;
   }
 }

@@ -87,6 +87,7 @@
         img {
           width: 35%;
           float: left;
+          @extend %border-images;
           @include adaptive-value("margin-bottom", 16, 8, 1);
           @include adaptive-value("margin-right", 16, 8, 1);
           @media (max-width: 992px) {

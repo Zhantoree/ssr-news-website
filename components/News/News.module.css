@@ -1,4 +1,4 @@
-.news .news__button button, .news .news__content .news__title {
+.news .news__button a button, .news .news__content .news__title {
   font-size: calc(14px + 10 * ((100vw - 320px) / 1080));
   font-weight: 600;
 }
@@ -73,11 +73,29 @@
   justify-content: flex-end;
   width: 100%;
 }
-.news .news__button button {
+.news .news__button a button {
   background-color: var(--secondary-color);
   height: 2rem;
   border-radius: 6px;
-  width: 50%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+@media (max-width: 1200px) {
+  .news .news__button a button {
+    padding-right: calc(4px + 6 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .news .news__button a button {
+    padding-left: calc(4px + 6 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .news .news__button a button {
+    margin-bottom: calc(4px + 4 * ((100vw - 320px) / 880));
+  }
 }
 
 /*# sourceMappingURL=News.module.css.map */

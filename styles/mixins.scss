@@ -47,4 +47,7 @@ $maxWidthContainer: 1200;
 %drop-font-size {
   @include adaptive-font(16, 12);
 }
+%border-images {
+  border: 8px solid var(--secondary-color);
+}
 

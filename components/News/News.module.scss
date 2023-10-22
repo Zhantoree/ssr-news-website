@@ -47,12 +47,19 @@
     justify-content: flex-end;
     width: 100%;
 
-    button {
-      @extend %title-font-size;
-      background-color: var(--secondary-color);
-      height: 2rem;
-      border-radius: 6px;
-      width: 50%;
+    a {
+
+
+      button {
+        @extend %title-font-size;
+        background-color: var(--secondary-color);
+        height: 2rem;
+        border-radius: 6px;
+        @include adaptive-value("padding-right",10, 4, 1);
+        @include adaptive-value("padding-left",10, 4, 1);
+        @include adaptive-value("margin-bottom",8, 4, 1);
+        width: fit-content;
+      }
     }
   }
 }
