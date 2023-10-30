@@ -1,4 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Тестовое задание
+Необходимо реализовать 2-х страничное новостное SPA приложение, в качестве бэкенда
+использовать Guardian API (для получения API ключа требуется регистрация).
+Приложение состоит из главной страницы, отображающей карточки новостей, при клике на
+какую-либо карточку должна открываться соответствующая страница новости.
+В качестве технического стека использовать: Next.js, Typescript, Redux Toolkit, CSS Modules.
+Дополнительно можно использовать любые JS библиотеки, которые помогут решить
+поставленную задачу.
+Требования к верстке: адаптивная (до 320px), кроссбраузерная.
+Главная страница:
+- Необходимо реализовать функционал поиска новостей по ключевому слову
+- Реализовать сортировку результатов поисковой выдачи по релевантности и по дате
+новости
+- Реализовать настройку количества отображаемых новостей на 1 странице
+- При скролле к последней новости на странице реализовать подгрузку новостей со
+следующей страницы
+- Весь стейт на этой страницы должен храниться в redux, данные с бэкенда
+запрашивать через redux async thunk
+- Использовать соответствующий эндпойнт для поиска новостей - ссылка на
+документацию
+
+Страница новости:
+- Данная страница должна отображать текст новости
+- Параграфы, заголовки, списки, имеющиеся в тексте новости, должны иметь
+соответствующие стили для правильного отображения их на странице (отступы
+между элементами, жирное начертание шрифта для заголовков, реализовать стили
+для цитат, картинок и других элементов, встречающихся в тексте новости)
+- Также данная страница должна содержать дату новости, картинку иллюстрирующую
+эту новость (получить с бэкенда), ссылку на оригинальную статью на сайте Guardian,
+кнопку для перехода назад на главную страницу
+- Данные на этой странице необходимо запрашивать на стороне сервера, для
+страницы должен быть реализован Server Side Rendering
+- Использовать соответствующий эндпойнт для запроса данных о новости - ссылка на
+документацию
+
+## Test task
+It is necessary to implement a 2-page SPA news application, as a backend.
+Use Guardian API (registration is required to get API key).
+The application consists of the main page, displaying news cards, when clicking on
+any card should open the corresponding news page.
+As a technical stack use: Next.js, Typescript, Redux Toolkit, CSS Modules.
+Additionally, you can use any JS libraries that will help to solve
+the task at hand.
+Layout requirements: adaptive (up to 320px), cross-browser.
+Home page:
+- It is necessary to implement the functionality of news search by keyword
+- Realize sorting of search results by relevance and by date
+news
+- Realize customization of the number of displayed news on 1 page
+- When scrolling to the last news on the page, implement loading of news from the next page.
+next page
+- All the state on this page should be stored in redux, data from the backend
+request via redux async thunk
+- Use appropriate endpoint for news search - link to the
+documentation
+
+
+News page:
+- This page should display the news text
+- Paragraphs, headings, lists present in the text of the news should have
+appropriate styles to display them properly on the page (indentation
+between elements, bold font for headings, implement styles for quotes, pictures and others
+for quotes, pictures and other elements found in the text of the news).
+- Also this page should contain the date of the news, a picture illustrating the news (get it from the backend).
+the news (get it from the backend), a link to the original article on the Guardian website,
+a button to go back to the main page
+- The data on this page should be requested on the server side, for the
+Server Side Rendering should be implemented for the page
+- Use the appropriate endpoint to request news data - link to the
+documentation
+
+
+
+## Demo on Vercel:
+https://ssr-news-website.vercel.app/
+
 
 ## Getting Started
 
@@ -16,25 +91,4 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
